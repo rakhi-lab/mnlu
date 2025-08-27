@@ -1,4 +1,4 @@
-
+// scroll up
   const scrollBtn = document.getElementById('scrollTopBtn');
 
   window.onscroll = function () {
@@ -12,37 +12,6 @@
   scrollBtn.addEventListener('click', function () {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
-
-// scroll bar
-
-  let lastScrollTop = 0;
-  let scrollbarStyle = document.createElement('style');
-  document.head.appendChild(scrollbarStyle);
-
-  window.addEventListener('scroll', () => {
-    let scrollTop = window.scrollY;
-
-    // Expand scrollbar on scroll
-    scrollbarStyle.innerHTML = `
-      ::-webkit-scrollbar {
-        width: ${scrollTop > lastScrollTop ? '14px' : '12px'};
-      }
-      ::-webkit-scrollbar-thumb {
-        background: linear-gradient(180deg, #2795c4, #1d759d);
-        box-shadow: ${scrollTop > lastScrollTop ? '0 0 12px rgba(39,149,196,0.7)' : 'none'};
-      }
-    `;
-
-    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-  });
-
-
-  // social media
-
-  function toggleShare() {
-  const icons = document.getElementById('socialIcons');
-  icons.style.display = icons.style.display === 'flex' ? 'none' : 'flex';
-}
 
 
 // admission form popup
@@ -91,3 +60,9 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+// share 
+function toggleShare() {
+  const socialIcons = document.getElementById('socialIcons');
+  socialIcons.classList.toggle('show');
+}
