@@ -80,7 +80,6 @@ html {
 /* ============================= */
 /*         NAVBAR                */
 /* ============================= */
-/* Default navbar styling */
 .navbar {
   background: var(--secondary-light);
   flex-wrap: wrap; /* Allows wrapping on smaller widths */
@@ -164,33 +163,6 @@ html {
   scale: 1.05;
 }
 
-/* Stylish Scrollbar */
-::-webkit-scrollbar {
-  width: 10px;
-  transition: width 0.3s ease;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--primary-light);
-  border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #2795c4, #1d759d);
-  border-radius: 10px;
-  border: 2px solid #f8f9fa;
-  transition: background 0.3s ease, box-shadow 0.3s ease;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #1d759d, #145473);
-  box-shadow: 0 0 10px rgba(39, 149, 196, 0.6);
-}
-
-html {
-  scrollbar-width: thin;
-  scrollbar-color: var(--primary-sky), var(--primary-light) ;
-}
 
 
 /* ============================= */
@@ -202,8 +174,7 @@ html {
   height: 40vw;
   width: 100%;
   margin: 0;
-  overflow: hidden;
-  
+  overflow-x: hidden;
 }
 
 #mainCarousel .carousel-item img {
@@ -1618,8 +1589,6 @@ a.text-decoration-none:hover .icon-topic {
   background: var(--primary-sky);
 }
 
-
-
 /* Grid of logos */
 .logo-grid {
   display: flex;
@@ -2081,8 +2050,6 @@ a.text-decoration-none:hover .icon-topic {
   }
 }
 
-
-
 /* === Circles === */
 .shape-circle {
   width: 100px;
@@ -2224,8 +2191,6 @@ a:hover {
   border-radius: 10px;
 }
 
-
-/* ✅ Responsive Tweaks */
 @media (max-width: 768px) {
   .visit-us-btn {
     bottom: 20px;
@@ -2263,7 +2228,7 @@ a:hover {
 }
 
 /* WhatsApp Floating Button */
-.whatsapp-float {
+/* .whatsapp-float {
   position: fixed;
   bottom: 80px;
   right: 20px;
@@ -2287,15 +2252,15 @@ a:hover {
 .whatsapp-float:hover {
   transform: scale(1.1);
   background: rgb(7, 160, 7);
-}
+} */
 
 /* Scroll-to-Top Button */
 .scroll-to-top {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #2795c4;
-  color: white;
+  background-color: var(--primary-sky);
+  color: var(--primary-light);
   border: none;
   border-radius: 50%;
   width: 50px;
@@ -2312,4 +2277,204 @@ a:hover {
 .scroll-to-top:hover {
   background-color: var(--secondary-dark);
   transform: scale(1.1);
+}
+/* Share Container */
+.share-container {
+  position: fixed;
+  bottom: 70px;
+  right: 10px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+/* Share Button */
+.share-btn {
+  background: var(--primary-sky);
+  color: var(--primary-light);
+  border: none;
+  padding: 5px 15px;
+  border-radius: 50px;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.3s ease;
+}
+
+.share-btn:hover {
+  background: var(--primary-dark);
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 12px;
+  align-items: center;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.social-icons.show {
+  opacity: 1;
+  max-height: 500px; /* allows smooth expand */
+}
+
+/* Social Icon Links */
+.social-icons a {
+  background: var(--primary-light);
+  color: var(--primary-sky);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  background: var(--primary-sky);
+  color: var(--primary-light);
+  transform: scale(1.1);
+}
+
+
+@media (max-width: 600px) {
+  .share-container {
+    align-items: center;
+    padding: 4px 2px;
+  }
+}
+
+
+/* Admission Form popup */
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
+/* Popup Box */
+.popup-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  width: 600px;
+  max-width: 100%;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  animation: fadeIn 0.02s ease-in-out;
+}
+
+
+.button{
+  margin: 10px;
+  padding: 10px 50px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+}
+
+.popup-img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  
+}
+
+.form-btn{
+background: var(--primary-dark);
+color: var(--primary-light);
+}
+.form-btn:hover { background: var(--primary-sky); color:var(--primary-light)  }
+.download-btn { background: var(--btn-color); color: var(--primary); }
+.download-btn:hover { background: var(--primary-sky); color: var(--primary-light); }
+.cancel-btn {
+  background: #ff4d4d;
+}
+.cancel-btn:hover {
+  background: #cc0000;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(-10px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .popup-content {
+    width: 90%;
+    padding: 15px;
+  }
+  .btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+  h2 {
+    font-size: 18px;
+  }
+  p {
+    font-size: 14px;
+  }
+}
+
+.modal-content {
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.modal-body img {
+  max-height: 300px;
+  object-fit: cover;
+}
+
+
+/* Theme Option Styling */
+.theme-option {
+  width: 40px;
+  height: auto;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+}
+
+.theme-option:hover {
+  transform: scale(1.2);
+}
+
+/* Palette Animation */
+#colorPalette {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
