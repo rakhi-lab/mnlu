@@ -1,3 +1,26 @@
+// navbar dropdown
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Select all dropdown-submenu toggle links
+  document.querySelectorAll('.dropdown-submenu > a').forEach(function (element) {
+    element.addEventListener('click', function (e) {
+      let nextEl = this.nextElementSibling;
+      if (nextEl && nextEl.classList.contains('dropdown-menu')) {
+        e.preventDefault();
+        nextEl.classList.toggle('show');
+
+        // Close other open submenus
+        let parentDropdown = this.closest('.dropdown-menu');
+        let openSubmenus = parentDropdown.querySelectorAll('.dropdown-menu.show');
+        openSubmenus.forEach(function (submenu) {
+          if (submenu !== nextEl) submenu.classList.remove('show');
+        });
+      }
+    });
+  });
+});
+
+
 // scroll up
   const scrollBtn = document.getElementById('scrollTopBtn');
 

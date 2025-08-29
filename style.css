@@ -185,7 +185,7 @@ html {
 /* Top Info Bar */
 
 /* Top Bar */
-/* Top Bar */
+
 .top-bar {
   background: #fff;
   font-size: 14px;
@@ -263,14 +263,46 @@ html {
 
 /* searchbar */
 
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap; /* for responsiveness */
+  background: #f8f9fa; /* light background */
+  padding: 10px 20px;
+}
+
+.brand-logo .logo {
+  max-width: 80px;
+  height: auto;
+}
+
+.brand-name {
+  flex: 1;
+  text-align: center;
+  margin: 10px;
+}
+
+.brand-name h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.brand-name p {
+  font-size: 0.9rem;
+  margin: 2px 0;
+}
+
 .search-box {
   position: relative;
-  max-width: 350px;
-  margin-left: auto;
+  max-width: 300px;
+  width: 100%;
 }
 
 .search-box input {
-  padding-right: 40px;
+  width: 100%;
+  padding-right: 45px;
   border-radius: 25px;
   border: 1px solid #ccc;
 }
@@ -278,20 +310,22 @@ html {
 .search-btn {
   position: absolute;
   right: 0px;
-  top: 0%;
-  /* transform: translateX(50%); */
-  /* background: #4b2a82; */
+
+  background: var(--primary-sky);
   color: #fff;
   border-radius: 50%;
   padding: 8px;
   border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
 .search-btn:hover {
-  /* background: #331f5d; */
+  background: #3a2166;
 }
 
 
+/* Navbar */
 /* Navbar */
 .navbar {
   font-size: 16px;
@@ -305,9 +339,98 @@ html {
 }
 
 .navbar-nav .nav-link:hover {
-  background: #331f5d;
+  background: var(--primary-dark);
   border-radius: 4px;
 }
+
+/* Dropdown base */
+.navbar-nav .dropdown-menu {
+  background-color: var(--primary-sky);
+  border-radius: 0;
+  border: none;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Show dropdown on hover */
+.nav-item:hover > .dropdown-menu,
+.dropdown-submenu:hover > .dropdown-menu {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Dropdown items */
+.navbar-nav .dropdown-item {
+  color: #fff;
+  font-weight: 500;
+  padding: 10px 15px;
+}
+
+.navbar-nav .dropdown-item:hover {
+  background-color: var(--primary-dark);
+}
+
+/* Multi-level dropdown */
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu > .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-left: .1rem;
+}
+
+/* Caret for submenus */
+.dropdown-submenu > a::after {
+  content: " ▶";
+  float: right;
+}
+
+/* Responsive fix */
+@media (max-width: 991px) {
+  .dropdown-menu {
+    visibility: visible;
+    opacity: 1;
+    transform: none;
+    position: static !important;
+  }
+  .dropdown-submenu > .dropdown-menu {
+    left: 0;
+  }
+}
+
+/* Style for multi-level dropdowns */
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -1px;
+}
+
+/* Show submenus on hover (for desktop) */
+@media (min-width: 992px) {
+  .dropdown-submenu:hover .dropdown-menu {
+    display: block;
+  }
+}
+
+/* Optional animation */
+.dropdown-menu {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 
 
 /* ============================= */
@@ -2373,32 +2496,39 @@ a:hover {
   }
 }
 
-/* WhatsApp Floating Button */
-.whatsapp-float {
-  position: fixed;
-  bottom: 100px;
-  left: 20px;
-  background-color: #25d366;
-  width: 55px;
-  height: 55px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
+/* WhatsApp Button */
+
+.whatsapp-btn {
+  display: inline-flex;
   align-items: center;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  background-color: #25D366;
+  color: white;
+  font-size: 18px;
+  padding: 12px 18px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+  position: fixed;     
+  bottom: 20px;      
+  left: 20px;            
   z-index: 1050;
-  transition: transform 0.3s ease;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transition: background 0.5s ease, transform 0.3s ease, color 0.3s ease;
+
 }
 
-.whatsapp-float img {
-  width: 32px;
-  height: 32px;
+.whatsapp-btn i {
+  margin-right: 8px;
+  font-size: 22px;
 }
 
-.whatsapp-float:hover {
-  transform: scale(1.1);
-  background: rgb(7, 160, 7);
+.whatsapp-btn:hover {
+  background-color: #1ebe5d;
+  color: var(--primary-dark);
+  transform: rotate(-5deg); 
 }
+
 
 /* Scroll-to-Top Button */
 .scroll-to-top {
