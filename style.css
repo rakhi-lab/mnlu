@@ -326,11 +326,18 @@ html {
 
 
 /* Navbar */
-/* Navbar */
+
 .navbar {
   font-size: 16px;
   background-color: var(--primary-sky);
+    position: sticky;  
+  top: 0;
+  z-index: 2000;
+  position: relative; 
 }
+
+
+
 
 .navbar-nav .nav-link {
   color: #fff;
@@ -343,23 +350,29 @@ html {
   border-radius: 4px;
 }
 
-/* Dropdown base */
+/* Dropdown base styling */
 .navbar-nav .dropdown-menu {
   background-color: var(--primary-sky);
-  border-radius: 0;
   border: none;
+  border-radius: 4px;
   visibility: hidden;
   opacity: 0;
   transform: translateY(10px);
   transition: all 0.3s ease-in-out;
+  position: absolute;
+  z-index: 1000;
 }
 
-/* Show dropdown on hover */
-.nav-item:hover > .dropdown-menu,
-.dropdown-submenu:hover > .dropdown-menu {
-  visibility: visible;
-  opacity: 1;
-  transform: translateY(0);
+
+/* Hover effect for desktop */
+@media (min-width: 992px) {
+  .nav-item:hover > .dropdown-menu,
+  .dropdown-submenu:hover > .dropdown-menu {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+    display: block;
+  }
 }
 
 /* Dropdown items */
@@ -368,6 +381,8 @@ html {
   font-weight: 500;
   padding: 10px 15px;
 }
+
+
 
 .navbar-nav .dropdown-item:hover {
   background-color: var(--primary-dark);
@@ -378,7 +393,11 @@ html {
   position: relative;
 }
 
+
 .dropdown-submenu > .dropdown-menu {
+
+    position: absolute;
+  z-index: 1100; 
   top: 0;
   left: 100%;
   margin-left: .1rem;
@@ -386,49 +405,32 @@ html {
 
 /* Caret for submenus */
 .dropdown-submenu > a::after {
-  content: " ▶";
+  content: "▶";
   float: right;
 }
 
-/* Responsive fix */
+/* Responsive: Mobile view */
 @media (max-width: 991px) {
+  .navbar-collapse {
+    background: var(--primary-sky);
+    padding: 10px;
+  }
+
   .dropdown-menu {
-    visibility: visible;
-    opacity: 1;
-    transform: none;
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: none !important;
     position: static !important;
+    display: none; /* Hidden by default for mobile */
   }
+
+  .dropdown-menu.show {
+    display: block; /* Show on click */
+  }
+
   .dropdown-submenu > .dropdown-menu {
-    left: 0;
+    padding-left: 15px; /* indent for submenu */
   }
-}
-
-/* Style for multi-level dropdowns */
-.dropdown-submenu {
-  position: relative;
-}
-
-.dropdown-submenu .dropdown-menu {
-  top: 0;
-  left: 100%;
-  margin-top: -1px;
-}
-
-/* Show submenus on hover (for desktop) */
-@media (min-width: 992px) {
-  .dropdown-submenu:hover .dropdown-menu {
-    display: block;
-  }
-}
-
-/* Optional animation */
-.dropdown-menu {
-  animation: fadeIn 0.3s ease-in-out;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
 }
 
 

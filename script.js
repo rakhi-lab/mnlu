@@ -1,24 +1,33 @@
 // navbar dropdown
 
 document.addEventListener("DOMContentLoaded", function () {
-  // Select all dropdown-submenu toggle links
+  // Toggle submenus on mobile
   document.querySelectorAll('.dropdown-submenu > a').forEach(function (element) {
     element.addEventListener('click', function (e) {
-      let nextEl = this.nextElementSibling;
-      if (nextEl && nextEl.classList.contains('dropdown-menu')) {
+      if (window.innerWidth < 992) { // Only on mobile
         e.preventDefault();
-        nextEl.classList.toggle('show');
+        let nextEl = this.nextElementSibling;
+        if (nextEl && nextEl.classList.contains('dropdown-menu')) {
+          nextEl.classList.toggle('show');
 
-        // Close other open submenus
-        let parentDropdown = this.closest('.dropdown-menu');
-        let openSubmenus = parentDropdown.querySelectorAll('.dropdown-menu.show');
-        openSubmenus.forEach(function (submenu) {
-          if (submenu !== nextEl) submenu.classList.remove('show');
-        });
+          // Close other submenus at same level
+          let parentMenu = this.closest('.dropdown-menu');
+          parentMenu.querySelectorAll('.dropdown-menu.show').forEach(function (submenu) {
+            if (submenu !== nextEl) submenu.classList.remove('show');
+          });
+        }
       }
     });
   });
+
+  // Close all dropdowns when navbar collapses
+  document.querySelector('.navbar-toggler').addEventListener('click', function () {
+    document.querySelectorAll('.dropdown-menu.show').forEach(function (menu) {
+      menu.classList.remove('show');
+    });
+  });
 });
+
 
 
 // scroll up
