@@ -202,20 +202,20 @@ html {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 12px;
+    gap: 15px;
     padding: 10px 20px;
   }
 
   .brand-logo img {
-    height: 65px;
+    height: 70px;
   }
 
   .brand-name h1 {
-    font-size: 20px;
+    font-size: 22px;  /* slightly bigger */
   }
 
   .brand-name p {
-    font-size: 12px;
+    font-size: 13px;  /* readable */
   }
 
   .search-box {
@@ -224,43 +224,43 @@ html {
   }
 
   .search-box input {
-    width: 70%;
+    width: 75%;
     font-size: 14px;
   }
 
   .search-box .search-btn {
     font-size: 13px;
-    padding: 5px 10px;
+    padding: 5px 12px;
   }
 }
 
 @media (max-width: 576px) {
   .header {
-    gap: 8px;
-    padding: 8px 15px;
+    gap: 12px;
+    padding: 10px 15px;
   }
 
   .brand-logo img {
-    height: 50px;
+    height: 60px; /* bigger than previous 50px */
   }
 
   .brand-name h1 {
-    font-size: 16px;
+    font-size: 18px; /* readable */
   }
 
   .brand-name p {
-    font-size: 10px;
+    font-size: 12px; /* readable */
   }
 
   .search-box input {
     width: 100%;
-    font-size: 12px;
-    padding: 5px 8px;
+    font-size: 13px; /* bigger than before */
+    padding: 6px 10px;
   }
 
   .search-box .search-btn {
-    padding: 4px 8px;
-    font-size: 11px;
+    padding: 5px 10px;
+    font-size: 12px; /* readable */
   }
 }
 
