@@ -29,7 +29,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-
 // scroll up
   const scrollBtn = document.getElementById('scrollTopBtn');
 
@@ -98,3 +97,53 @@ function toggleShare() {
   const socialIcons = document.getElementById('socialIcons');
   socialIcons.classList.toggle('show');
 }
+
+// scrollWrappers
+const scrollWrappers = document.querySelectorAll('.scroll-wrapper');
+
+scrollWrappers.forEach(wrapper => {
+  const content = wrapper.querySelector('.scroll-content');
+  let scrollAmount = 0;
+
+  setInterval(() => {
+    scrollAmount += 1;
+    if (scrollAmount >= content.scrollHeight - wrapper.clientHeight) {
+      scrollAmount = 0;
+    }
+    wrapper.scrollTop = scrollAmount;
+  }, 50); 
+})
+
+
+// navbar
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const submenus = document.querySelectorAll('.dropdown-submenu');
+
+    submenus.forEach(submenu => {
+      submenu.addEventListener('mouseenter', function () {
+        const dropdownMenu = this.querySelector('.dropdown-menu');
+        if (!dropdownMenu) return;
+
+        // Reset previous class
+        this.classList.remove('dropdown-flip-left');
+
+        const rect = dropdownMenu.getBoundingClientRect();
+        const viewportWidth = window.innerWidth;
+
+        // If submenu will overflow the viewport
+        if (rect.right > viewportWidth) {
+          this.classList.add('dropdown-flip-left');
+        }
+      });
+    });
+  });
+
+  // stay conected
+document.querySelectorAll('#socialTab a').forEach(link => {
+  link.addEventListener('dblclick', function () {
+    // Double click -> Official page open
+    let url = this.getAttribute('data-url');
+    window.open(url, '_blank');
+  });
+});

@@ -1,0 +1,124 @@
+.info-content{
+    font-size: 16px;
+}
+.message-text{
+	text-align:justify;
+}
+.recognition-bar a {
+	font-style: italic;
+}      
+.footer{
+	display:flex;
+	bottom:0;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.icon-topic{
+	font-size:12px;
+}
+.feature-card:hover{
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 6px 16px 10px var(--primary-light);
+    background-color: var(--primary-dark);
+}
+
+.medal {
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	margin-left:48%;
+}
+.about-containt{
+	text-align:justify;
+}
+.speaker-name{
+	text-align:justify;
+	padding:10px;
+}
+.scroll-to-top{
+	font-size:16px;
+}
+.dropdown-item{
+	inline-box-align:baseline;
+}
+/* .gt_selected, .gt_option{
+	padding:0;
+	margin:0;
+} */
+
+
+/* 🔹 Responsive Styling */
+@media (max-width: 991px) {
+  .header {
+    flex-direction: column;   /* stack logo, name, search */
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .brand-logo img {
+    width: 80px;
+  }
+
+  .brand-name h1 {
+    font-size: 14px;
+  }
+
+  .brand-name p {
+    font-size: 10px;
+  }
+
+  .search-box {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .search-box input {
+    width: 70%; /* take most of the width */
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .brand-logo img {
+    width: 50px;
+  }
+
+  .brand-name h1 {
+    font-size: 10px;
+  }
+
+  .brand-name p {
+    font-size: 6px;
+  }
+
+  .search-box input {
+    width: 100%;
+    font-size: 12px;
+  }
+
+  .search-box .search-btn {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+}
+.uni-header{
+	margin-bottom:0;
+	padding-bottom:10px;
+}
+.brand-logo img {
+	width:9vw;
+	height:9vw;
+}
+.brand-logo{	
+	transition:all 0.3s ease-in-out;
+}
+.brand-logo:hover {
+  transform: scale(1.1);
+}
+.brand-name{
+font-size:10vw;
+}

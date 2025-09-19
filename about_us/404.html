@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 Error - Page Not Found</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Background shape */
+    .bg-shape {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 200px;
+      background: #fff;
+      clip-path: polygon(0 70%, 100% 20%, 100% 100%, 0 100%);
+    }
+
+    .container {
+      max-width: 650px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .error {
+      font-size: 8rem;
+      font-weight: 800;
+      margin: 0;
+      line-height: 1;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .error:hover{
+        color: #ffcc00;
+        filter: drop-shadow(2px 2px 2px  yellow);
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      opacity: 0.9;
+    }
+
+    a.home-button {
+      display: inline-block;
+      padding: 14px 28px;
+      background: #fff;
+      color: #2a5298;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: 600;
+      transition: all 0.3s ease-in-out;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    a.home-button:hover {
+      background: #ffcc00;
+      color: #000;
+      transform: translateY(-4px);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Animated Icon */
+    .animation {
+      font-size: 5rem;
+      animation: bounce 1.5s infinite;
+      display: inline-block;
+      cursor: pointer;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .animation:hover {
+      transform: scale(1.3) rotate(10deg);
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-15px);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="animation">🚀</div>
+    <h1 class="error">404</h1>
+    <h2>Oops! Page Not Found</h2>
+    <p>The page you’re looking for might have been removed, renamed, or is temporarily unavailable.</p>
+    <a class="home-button" href="/">Go Back Home</a>
+  </div>
+
+  <!-- Background Shape -->
+  <div class="bg-shape"></div>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+<!-- footer part -->
+
+
+/* Ensure footer background and text colors */
+.footer-section {
+  background-color: var(--primary-sky);
+  color: var(--primary-light);
+  overflow: hidden;
+  font-family: var(--font-abhaya);
+  position: relative;
+  font-family: Arial, sans-serif;
+}
+
+/* Links */
+.footer-section a {
+  color: var(--primary-light);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer-section a:hover {
+  color: var(--primary-dark);
+  padding-left: 5px;
+  text-shadow: 0 0 3px #2795c4;
+}
+
+/* Headings */
+.footer-section h5 {
+  color: var(--primary-dark);
+  font-family: var(--font-times);
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+/* Social icons */
+.social-icon {
+  font-size: 20px;
+  color: var(--primary-light);
+  transition: all 0.3s ease-in-out;
+}
+
+.social-icon:hover {
+  color: var(--primary-sky);
+  transform: rotate(8deg) scale(1.2);
+}
+
+/* Responsive tweaks */
+@media (max-width: 991.98px) {
+
+  .footer-section .row.gy-4>div {
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .footer-section .row.mt-4.align-items-center {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-section .row.mt-4.align-items-center>div {
+    margin-bottom: 1rem;
+  }
+
+  .footer-section iframe {
+    width: 100%;
+    height: 250px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .footer-section h5 {
+    font-size: 1.2rem;
+  }
+
+  .social-icon {
+    font-size: 18px;
+  }
+}
+
+
+/* === Background Shapes === */
+.footer-shape {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.3;
+  z-index: 0;
+}
+
+.shape-1 {
+  width: 150px;
+  height: 150px;
+  background-color: var(--primary-light);
+  top: -40px;
+  left: -40px;
+  animation: swing 6s ease-in-out infinite;
+}
+
+.shape-2 {
+  width: 500px;
+  height: 500px;
+  background-color: var(--primary-light);
+  bottom: 5px;
+  right: -200px;
+  animation: swing 7s ease-in-out infinite;
+}
+
+.shape-3 {
+  width: 60px;
+  height: 120px;
+  background-color: var(--primary-light);
+  bottom: 0;
+  left: 30;
+  transform: translate(-50%, -50%);
+  animation: float 10s ease-in-out infinite;
+}
+
+/* === Animations === */
+@keyframes swing {
+  0% {
+    transform: rotate(0deg) translateX(0);
+  }
+
+  50% {
+    transform: rotate(5deg) translateX(10px);
+  }
+
+  100% {
+    transform: rotate(0deg) translateX(0);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translate(-50%, -50%) translateY(0px);
+  }
+
+  50% {
+    transform: translate(-50%, -50%) translateY(-15px);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) translateY(0px);
+  }
+}
+
+/* === Circles === */
+.shape-circle {
+  width: 100px;
+  height: 100px;
+  background-color: var(--primary-sky);
+  border-radius: 50%;
+  top: 10%;
+  left: 5%;
+  animation: floatCircle 10s ease-in-out infinite;
+}
+
+.shape-circle-2 {
+  width: 60px;
+  height: 60px;
+  background-color: var(--primary-light);
+  border-radius: 50%;
+  bottom: 15%;
+  left: 75%;
+  animation: floatCircle 8s ease-in-out infinite;
+}
+
+
+--------------------
+
+<?php
+
+/**
+ * The template for displaying the footer
+ */
+?>
+</main>
+<footer class="footer-section position-relative text-white py-5">
+  <!-- Background Shapes -->
+  <div class="footer-shape shape-1"></div>
+  <div class="footer-shape shape-2"></div>
+  <div class="footer-shape shape-3"></div>
+
+  <div class="container position-relative">
+    <div class="row gy-4">
+
+      <!-- Footer Widget 1 -->
+      <div class="col-lg-4 footer-1">
+        <?php if (is_active_sidebar('footer-1')) : ?>
+          <?php dynamic_sidebar('footer-1'); ?>
+        <?php endif; ?>
+      </div>
+
+      <!-- Footer Widget 2 -->
+      <div class="col-lg-3 footer-2">
+        <?php if (is_active_sidebar('footer-2')) : ?>
+          <?php dynamic_sidebar('footer-2'); ?>
+        <?php endif; ?>
+      </div>
+
+      <!-- Footer Widget 3 -->
+      <div class="col-lg-3 footer-3">
+        <?php if (is_active_sidebar('footer-3')) : ?>
+          <?php dynamic_sidebar('footer-3'); ?>
+        <?php endif; ?>
+      </div>
+
+      <!-- Footer Widget 4 -->
+      <div class="col-lg-2 footer-4">
+        <?php if (is_active_sidebar('footer-4')) : ?>
+          <?php dynamic_sidebar('footer-4'); ?>
+        <?php endif; ?>
+      </div>
+
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="row mt-4 align-items-center">
+      <div class="col-md-6">
+        <p class="mb-0">© <?php echo date('Y'); ?> Maharashtra National Law University. All rights reserved.</p>
+      </div>
+      <div class="col-md-6 text-end">
+        <a href="#" class="me-3 social-icon"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="me-3 social-icon"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="me-3 social-icon"><i class="bi bi-linkedin"></i></a>
+        <a href="#" class="social-icon"><i class="bi bi-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+<?php
+// Get customizer settings
+$whatsapp_enabled = get_theme_mod('mnlu_whatsapp_button_enable', true);
+$whatsapp_phone = get_theme_mod('mnlu_whatsapp_phone_number', '919876543210');
+$whatsapp_message = get_theme_mod('mnlu_whatsapp_default_message', 'Hello I want to know more');
+$scroll_enabled = get_theme_mod('mnlu_scroll_to_top_enable', true);
+$share_enabled = get_theme_mod('mnlu_share_button_enable', true);
+$theme_switcher_enabled = get_theme_mod('mnlu_theme_switcher_enable', true);
+
+// Social media URLs
+$facebook_url = get_theme_mod('mnlu_social_facebook_url', 'https://www.facebook.com/mnlumumbaiofficial');
+$twitter_url = get_theme_mod('mnlu_social_twitter_url', 'https://x.com/mnlumumbai');
+$linkedin_url = get_theme_mod('mnlu_social_linkedin_url', 'https://www.linkedin.com/school/13248568/admin');
+$youtube_url = get_theme_mod('mnlu_social_youtube_url', 'https://www.youtube.com/MNLUMumbai');
+$whatsapp_share_text = get_theme_mod('mnlu_whatsapp_share_text', 'Check this out');
+?>
+
+<?php if ($whatsapp_enabled) : ?>
+<a href="https://wa.me/<?php echo esc_attr($whatsapp_phone); ?>?text=<?php echo urlencode($whatsapp_message); ?>" target="_blank" class="whatsapp-btn">
+  <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+</a>
+<?php endif; ?>
+
+<?php if ($scroll_enabled) : ?>
+<!-- Scroll to Top Button -->
+<button class="scroll-to-top" id="scrollTopBtn">
+  ↑
+</button>
+<?php endif; ?>
+
+<?php if ($share_enabled) : ?>
+<!-- Share Button & Social Icons -->
+<div class="share-container">
+  <button class="share-btn d-flex align-items-center" onclick="toggleShare()">
+    <i class="fas fa-share-alt me-2"></i> Share
+  </button>
+
+  <div class="social-icons mt-3" id="socialIcons">
+    <?php if ($facebook_url) : ?>
+    <a href="<?php echo esc_url($facebook_url); ?>" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+    <?php endif; ?>
+    
+    <?php if ($twitter_url) : ?>
+    <a href="<?php echo esc_url($twitter_url); ?>" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+    <?php endif; ?>
+    
+    <?php if ($linkedin_url) : ?>
+    <a href="<?php echo esc_url($linkedin_url); ?>" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+    <?php endif; ?>
+    
+    <a href="https://api.whatsapp.com/send?text=<?php echo urlencode($whatsapp_share_text); ?>" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    
+    <?php if ($youtube_url) : ?>
+    <a href="<?php echo esc_url($youtube_url); ?>" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+    <?php endif; ?>
+  </div>
+</div>
+<?php endif; ?>
+
+<?php
+// Include admission popup
+get_template_part('template-parts/admission-popup');
+?>
+
+<?php wp_footer(); ?>
+
+</body>
+
+</html>

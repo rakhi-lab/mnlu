@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Visiting Professors - MNLU Mumbai</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .professor-card {
+      border: none;
+      border-radius: 12px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .professor-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    }
+    .professor-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .professor-details h5 {
+      color: #0d6efd;
+      font-weight: 600;
+    }
+    @media (max-width: 767.98px) {
+      .professor-img {
+        height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container my-5">
+    <h2 class="mb-4 border-bottom pb-2 text-center text-md-start">
+      <i class="fas fa-user-graduate me-2 text-primary"></i> Visiting Professors
+    </h2>
+
+    <div class="row g-4">
+      <!-- Professor 1 -->
+      <div class="col-12">
+        <div class="card professor-card shadow-sm">
+          <div class="row g-0 flex-column flex-md-row">
+            <div class="col-md-3">
+              <img src="https://via.placeholder.com/350x400" 
+                   class="professor-img" alt="Hon’ble Justice Mohan Peiris">
+            </div>
+            <div class="col-md-9">
+              <div class="card-body professor-details">
+                <h5>Hon’ble Justice Mohan Peiris</h5>
+                <p class="text-muted">Permanent Representative of Sri Lanka to the United Nations, Former Attorney General</p>
+                <p>
+                 Hon’ble Justice Mohan Peiris
+
+Permanent Representative of Sri Lanka to the United Nations in New York
+
+Justice Peter Mohan Maithree Peiris, PC was the 43rd de facto Chief Justice of Sri Lanka. He previously held the post of Attorney General. President Maithripala Sirisena Ab initio his position in 2015, and will not be count as a Chief Justice of Sri Lanka. After qualifying, Peiris worked for senior lawyers Daya Perera and D. R. P. Gunatilleke. Peiris joined the Attorney General's Department in 1981 as a state counsel, later becoming a Senior State Counsel. He left the Attorney General's Department in 1996.
+
+Peiris was appointed Attorney General on 18 December 2008. He withdrew murder charges in a case against former deputy minister Chandana Kathriarachchi and served an indictment on unlawful assembly for which the accused pleaded guilty. Furthermore, he withdrew a rape case against Government Party Parliamentarian Duminda Silva.
+
+Peiris was appointed Senior Legal Officer to the Cabinet in September 2011. He became chairman of Seylan Bank in April 2012. He represented Sri Lanka in The UN Committee Against Torture in 2011 in which he said that the Sri Lankan government has received intelligence information that missing lankaenews cartoonist Prageeth Ekneligoda is living in a foreign country. However he concurred that he lied when he was summoned by a local court. Peiris was nominated to be Chief Justice by President Mahinda Rajapaksa following the controversial impeachment of Shirani Bandaranayake. The Parliamentary Council gave its approval for Peiris's appointment on 15 January 2013. On 28 January 2015, the Government of Sri Lanka acknowledged that the appointment of 44 Mohan Peiris as the Chief Justice was void at its inception as Dr. Shirani Bandaranayake was not impeached lawfully and therefore no vacancy existed for the post of Chief Justice. The paved way for Dr. Shirani Bandaranayake to resume duties as the Chief Justice of Sri Lanka.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Professor 2 -->
+      <div class="col-12">
+        <div class="card professor-card shadow-sm">
+          <div class="row g-0 flex-column flex-md-row">
+            <div class="col-md-3">
+              <img src="https://via.placeholder.com/350x400" 
+                   class="professor-img" alt="Prof. Thomas Pogge">
+            </div>
+            <div class="col-md-9">
+              <div class="card-body professor-details">
+                <h5>Prof. Thomas Pogge</h5>
+                <p class="text-muted">Professor of Philosophy & Political Science, Yale University, USA</p>
+                <p>
+                  Thomas Winfried Menko Pogge is a German philosopher and Director of the Global Justice Program at Yale University. 
+                  His work focuses on global ethics, poverty reduction, and reforms in international institutions to achieve social justice.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

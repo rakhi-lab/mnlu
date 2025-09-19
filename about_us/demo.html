@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo Page with Banner + FAQ</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background: #f4f6f9;
+      color: #333;
+    }
+
+    /* ===== Banner Section ===== */
+    .page-banner {
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: #fff;
+      padding: 80px 20px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-banner::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 120px;
+      background: #fff;
+      clip-path: polygon(0 100%, 100% 0, 100% 100%, 0 100%);
+    }
+
+    .page-banner h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    .page-banner p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 28px;
+      background: #ffcc00;
+      color: #000;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+    }
+
+    .cta-btn:hover {
+      background: #ffc107;
+      transform: translateY(-4px);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+    }
+
+    /* ===== Page Content ===== */
+    .content {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 0 20px;
+      line-height: 1.7;
+    }
+
+    .content h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #2a5298;
+    }
+
+    /* ===== FAQ Accordion ===== */
+    .faq-section {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid #ddd;
+      margin-bottom: 10px;
+    }
+
+    .faq-question {
+      width: 100%;
+      text-align: left;
+      padding: 15px;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      background: #f7f7f7;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .faq-question:hover {
+      background: #eaeaea;
+    }
+
+    .faq-answer {
+      display: none;
+      padding: 15px;
+      background: #fff;
+    }
+
+    .faq-item.active .faq-answer {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Banner -->
+  <section class="page-banner">
+    <h1>About Our University</h1>
+    <p>Committed to Excellence in Legal Education</p>
+    <a href="#apply" class="cta-btn">Apply Now</a>
+  </section>
+
+  <!-- Page Content -->
+  <section class="content">
+    <h2>Welcome to MNLU Mumbai</h2>
+    <p>
+      Maharashtra National Law University Mumbai is one of India’s premier law schools, dedicated
+      to providing world-class legal education and promoting academic excellence.
+      Our curriculum is designed to empower students with both practical skills and theoretical knowledge.
+    </p>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <button class="faq-question">What is MNLU Mumbai?</button>
+      <div class="faq-answer">
+        <p>MNLU Mumbai is a premier law university established in Maharashtra, focused on excellence in legal studies.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">How can I apply?</button>
+      <div class="faq-answer">
+        <p>You can apply through the official CLAT (Common Law Admission Test) process.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Does the university provide hostel facilities?</button>
+      <div class="faq-answer">
+        <p>Yes, we provide hostel facilities for both boys and girls.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Toggle Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      document.querySelectorAll(".faq-question").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const item = btn.parentElement;
+          item.classList.toggle("active");
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>
