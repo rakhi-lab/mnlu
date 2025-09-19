@@ -29,6 +29,9 @@ html {
   font-family: 'Abhaya Libre', Georgia, "Times New Roman", serif;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  margin: 0;
+  height: 100%;
+  box-sizing: border-box;
 }
 
 /* Scrollbar styling (Webkit Browsers) */
@@ -145,12 +148,24 @@ html {
   background: var(--primary-light);
   padding: 20px 15px;
   border-bottom: 1px solid #ddd;
+
+  margin-bottom:0;
+	padding-bottom:10px;
 }
 
 /* Logo */
 .brand-logo img {
-  height: 80px;
-  width: auto;
+  	width:7vw;
+	height:9vw;
+  /* height: 80px;
+  width: auto; */
+}
+
+.brand-logo{	
+	transition:all 0.3s ease-in-out;
+}
+.brand-logo:hover {
+  transform: scale(1.1);
 }
 
 /* University Name */
@@ -279,6 +294,7 @@ html {
 .recognition-bar a {
   color: var(--primary-dark);
   text-decoration: none;
+  font-style: italic;
 }
 
 .recognition-bar a:hover {
@@ -909,7 +925,7 @@ a:hover {
 }
 
 .icon-topic {
-  font-size: 1rem;
+ font-size:12px;
   font-weight: 600;
   text-transform: uppercase;
   color: var(--primary-light);
@@ -1184,8 +1200,10 @@ a.text-decoration-none:hover .icon-topic {
 }
 
 .feature-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  /* transform: translateY(-10px); */
+  transform: translateY(-8px) scale(1.03);
+  /* box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); */
+   box-shadow: 0 6px 16px 10px var(--primary-light);
   background-color: var(--primary-sky);
   color: var(--primary-light);
 }
@@ -1229,6 +1247,7 @@ a.text-decoration-none:hover .icon-topic {
   line-height: 2;
   word-spacing: 3px;
   color: #444;
+  text-align:justify;
 }
 
 .message-img {
@@ -1494,12 +1513,15 @@ a.text-decoration-none:hover .icon-topic {
   }
 
   .speaker-name {
-    font-size: 1rem;
+    font-size: 16px;
+    	text-align:justify;
+	padding:10px;
   }
 
   .view-more-btn {
     padding: 8px 20px;
     font-size: 0.95rem;
+    
   }
 
   .mnlu-icon {
@@ -2180,6 +2202,8 @@ a.text-decoration-none:hover .icon-topic {
   font-family: var(--font-abhaya);
   position: relative;
   font-family: Arial, sans-serif;
+  	display:flex;
+	bottom:0;
 }
 
 /* Links */
@@ -2538,7 +2562,7 @@ a:hover {
   border-radius: 50%;
   width: 50px;
   height: 50px;
-  font-size: 22px;
+  font-size: 16px;
   font-weight: bolder;
   display: none;
   cursor: pointer;
