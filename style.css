@@ -129,20 +129,20 @@ html {
   margin-right: 5px;
 }
 
-/* Header */
+
 /* Header */
 .header {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* better spacing */
+  justify-content: space-between;
   gap: 20px;
   padding: 10px 30px;
   background: var(--primary-light);
-  flex-wrap: wrap; /* ✅ allows wrapping on smaller screens */
+  flex-wrap: wrap;
 }
 
 .uni-header {
-  background: var(--primary-light);   /* light grey like NLU Delhi */
+  background: var(--primary-light);
   padding: 20px 15px;
   border-bottom: 1px solid #ddd;
 }
@@ -157,7 +157,7 @@ html {
 .brand-name h1 {
   font-size: 26px;
   font-weight: 700;
-  color: var(--primary-dark);  /* blue-violet like MNLU site */
+  color: var(--primary-dark);
   margin: 0;
   line-height: 1.2;
   font-family: Georgia, serif;
@@ -199,10 +199,11 @@ html {
 /* 🔹 Responsive Styling */
 @media (max-width: 991px) {
   .header {
-    flex-direction: column;   /* stack logo, name, search */
+    flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 15px;
+    gap: 12px;
+    padding: 10px 20px;
   }
 
   .brand-logo img {
@@ -223,12 +224,22 @@ html {
   }
 
   .search-box input {
-    width: 70%; /* take most of the width */
+    width: 70%;
     font-size: 14px;
+  }
+
+  .search-box .search-btn {
+    font-size: 13px;
+    padding: 5px 10px;
   }
 }
 
 @media (max-width: 576px) {
+  .header {
+    gap: 8px;
+    padding: 8px 15px;
+  }
+
   .brand-logo img {
     height: 50px;
   }
@@ -244,11 +255,12 @@ html {
   .search-box input {
     width: 100%;
     font-size: 12px;
+    padding: 5px 8px;
   }
 
   .search-box .search-btn {
-    padding: 5px 10px;
-    font-size: 12px;
+    padding: 4px 8px;
+    font-size: 11px;
   }
 }
 
